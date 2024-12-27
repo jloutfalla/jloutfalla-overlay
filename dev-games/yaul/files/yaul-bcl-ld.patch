@@ -1,0 +1,13 @@
+diff --git a/tools/bcl/bcl_prog.mk b/tools/bcl/bcl_prog.mk
+index eb2ff9e..2582c06 100644
+--- a/tools/bcl/bcl_prog.mk
++++ b/tools/bcl/bcl_prog.mk
+@@ -16,7 +16,7 @@ CFLAGS:= -O2 \
+ 	-Wno-parentheses \
+ 	-Wno-sign-compare
+ 
+-LDFLAGS?= -lm
++LDFLAGS+= -lm
+ 
+ INCLUDES:=
+ 
