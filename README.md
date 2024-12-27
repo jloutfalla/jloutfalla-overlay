@@ -6,4 +6,3 @@ To use my overlay:
 # eselect repository add jloutfalla-overlay git https://github.com/jloutfalla/jloutfalla-overlay
 # emerge --sync jloutfalla-repository
 ```
-
