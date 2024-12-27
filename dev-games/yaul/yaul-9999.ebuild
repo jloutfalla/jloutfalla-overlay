@@ -75,18 +75,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	_cols=`/usr/bin/tput cols`
-	_line=`/usr/bin/printf -- "*%.0s" \`/usr/bin/seq 1 ${_cols}\``
-
-	printf -- "${_line}\\n"
-
-	awk '{ printf "* " $0 "\n" }' <<EOF
-Please be sure to copy,
-	/opt/tool-chains/sh2eb-elf/yaul.env.in
-to
-	\$HOME/.yaul.env
-EOF
-
-	printf -- "${_line}\\n"
+	elog "Please be sure to copy,"
+	elog "	/${_INSTALL_RELPATH}/yaul.env.in"
+	elog "to"
+	elog "	\$HOME/.yaul.env"
+	elog "and source it."
 }
 
