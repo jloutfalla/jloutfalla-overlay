@@ -6,9 +6,12 @@ EAPI=8
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/yaul-org/libyaul.git"
 	inherit git-r3
+	KEYWORDS="-* ~amd64"
 else	
 	SRC_URI="https://github.com/yaul-org/libyaul/archive/refs/tags/${PV}.tar.gz"
 	S="${WORKDIR}/lib${P}"
+
+	KEYWORDS="amd64"
 fi
 
 inherit edo
@@ -18,7 +21,6 @@ HOMEPAGE="https://www.yaul.org"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="-* ~amd64"
 
 DEPEND="dev-games/yaul-toolchain dev-libs/libisoburn"
 RDEPEND="${DEPEND}"
