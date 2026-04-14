@@ -13,7 +13,7 @@ DESCRIPTION="Fork of Proton GE with rtsp and other streaming protocol patches, i
 HOMEPAGE="https://github.com/SpookySkeletons/proton-ge-rtsp"
 SRC_URI="https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/${_internal_name}/${_internal_name}.tar.gz -> ${_internal_name}.tar.gz"
 LICENSE="BSD LGPL zlib MIT MPL OFL Proton GPL MSPL"
-SLOT="rtsp"
+SLOT="${PV}"
 KEYWORDS="~amd64"
 RESTRICT="mirror strip"
 
