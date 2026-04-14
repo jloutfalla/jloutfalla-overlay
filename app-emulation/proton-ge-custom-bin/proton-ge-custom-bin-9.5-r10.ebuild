@@ -1,6 +1,7 @@
 # Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 # modified from ebuild available in the touchfish-os overlay
+# modified from ebuild available in the kzd overlay
 
 EAPI=8
 MULTILIB_COMPAT=(abi_x86_{32,64})
@@ -8,12 +9,12 @@ inherit multilib-minimal
 
 # SpookySkeletons/proton-ge-rtsp/releases/tag/GE-Proton8-30-rtsp-1
 
-_internal_name=GE-Proton9-5-rtsp10
+_internal_name=GE-Proton${PV/./-}-rtsp10
 DESCRIPTION="Fork of Proton GE with rtsp and other streaming protocol patches, ie for VRChat."
 HOMEPAGE="https://github.com/SpookySkeletons/proton-ge-rtsp"
 SRC_URI="https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/${_internal_name}/${_internal_name}.tar.gz -> ${_internal_name}.tar.gz"
 LICENSE="BSD LGPL zlib MIT MPL OFL Proton GPL MSPL"
-SLOT="${PV}"
+SLOT="rtsp"
 KEYWORDS="~amd64"
 RESTRICT="mirror strip"
 
